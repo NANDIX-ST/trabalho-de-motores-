@@ -13,14 +13,14 @@ public class Player : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("STARTE");
+      
         TryGetComponent(out rb);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("UPDATE");
+     
         float h = Input.GetAxis("Horizontal"); // -1 esquerda, 0 nada, 1 direito
         float v = Input.GetAxis("Vertical"); // -1 pra tras 
         Vector3 direcao = new Vector3(h, 0, v);
