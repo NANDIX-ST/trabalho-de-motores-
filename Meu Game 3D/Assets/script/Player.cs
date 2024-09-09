@@ -7,7 +7,7 @@ using Vector3 = UnityEngine.Vector3;
 public class Player : MonoBehaviour
 {
     public int velocidade = 10;
-    public int forcapulo = 7;
+    public int forcapulo = 10;
     public bool noChao;
     Rigidbody rb;
 
@@ -20,9 +20,9 @@ public class Player : MonoBehaviour
     }
 
 
-    private void onoCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (!noChao && collision.gameObject.tag == "Chao")
+        if (!noChao && collision.gameObject.tag == "chao")
         {
             noChao = true;
         }
